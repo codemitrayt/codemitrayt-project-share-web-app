@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
+const Home = async () => {
+  return <div className="h-screen">Home page</div>;
+};
 
-export default function Home() {
-  return <Button>Shadcn Button</Button>;
-}
+export default Home;
