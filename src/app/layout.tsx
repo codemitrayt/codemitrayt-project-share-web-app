@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 
+import { ClerkProvider } from "@clerk/nextjs";
+
 import { Plus_Jakarta_Sans as FontSans } from "next/font/google";
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -21,8 +23,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn(fontSans.variable)}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={cn(
+            "min-h-screen bg-dark-300 font-sans antialiased",
+            fontSans.variable
+          )}
+        >
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
