@@ -3,6 +3,8 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 
 import { ClerkProvider } from "@clerk/nextjs";
+import SiteHeader from "@/components/site-header";
+import SiteFooter from "@/components/site-footer";
 
 import { Plus_Jakarta_Sans as FontSans } from "next/font/google";
 const fontSans = FontSans({
@@ -26,12 +28,13 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body
-          className={cn(
-            "min-h-screen bg-dark-300 font-sans antialiased",
-            fontSans.variable
-          )}
+          className={cn("bg-dark-300 font-sans antialiased", fontSans.variable)}
         >
-          {children}
+          <div className="flex flex-col min-h-screen">
+            <SiteHeader />
+            <main className="flex-1"> {children}</main>
+            <SiteFooter />
+          </div>
         </body>
       </html>
     </ClerkProvider>
