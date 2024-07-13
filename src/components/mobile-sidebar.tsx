@@ -1,13 +1,15 @@
-import { Menu } from "lucide-react";
 import Link from "next/link";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import NavItems from "@/components/nav-items";
+import { Menu } from "lucide-react";
 import { currentUser } from "@clerk/nextjs/server";
-import ModeToggle from "./mode-toggle";
-import { Button } from "./ui/button";
 import { UserButton } from "@clerk/nextjs";
-import { Separator } from "./ui/separator";
-import LogoLink from "./logo-link";
+
+import LogoLink from "@/components/logo-link";
+import ModeToggle from "@/components/mode-toggle";
+import NavItems from "@/components/nav-items";
+
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const MobileSidebar = async () => {
   const user = await currentUser();
