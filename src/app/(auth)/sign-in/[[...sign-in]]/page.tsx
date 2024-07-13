@@ -9,7 +9,7 @@ export default function Page() {
       </ClerkLoading>
       <ClerkLoaded>
         <div className="flex items-center flex-col justify-center mb-8 space-y-1">
-          <h1 className="font-bold text-lg  text-brand-800">
+          <h1 className="font-bold text-lg text-brand-700">
             Welcome back to Share Project
           </h1>
           <p className="text-sm">Start sharing project with others.</p>
