@@ -3,7 +3,7 @@ import siteConfig from "@/configs/site-config";
 
 const SiteFooter = () => {
   return (
-    <footer className="md:px-8 border-t">
+    <footer className="md:px-8 border-t z-50 bg-background">
       <div className="container flex flex-col items-center justify-center gap-4 h-16 md:flex-row">
         <p className="text-balance text-center text-sm leading-loose text-foreground md:text-left">
           Built by{" "}
